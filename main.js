@@ -1,7 +1,6 @@
 // Import all of Bootstrap's JS
 import './src/scss/styles.scss'
 import * as bootstrap from 'bootstrap'
-import { obtenerChiste } from "./src/js/http-provider";
+import { init } from "./src/js/chistes-page";
 
-
-obtenerChiste().then(console.log);
+init();
