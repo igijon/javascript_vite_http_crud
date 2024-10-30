@@ -7,12 +7,13 @@
     <title>Vite App</title>
   </head>
   <body>
-     <div class="container">
-        <h1>Formularios</h1>
-  
-        <form id="formulario">
+    <div class="container">
+      <h1>Formularios</h1>
+
+      <form id="formulario" novalidate>
+        <label for="userName" class="row">
           <input
-            class="form-control mb-2"
+            class="form-control mb-2 col-1"
             name="userName"
             placeholder="Ingrese su nombre"
             autocomplete="off"
@@ -24,6 +25,8 @@
             minlength="3"
             maxlength="10"
           />
+        </label>
+        <label for="userEmail" class="row">
           <input
             class="form-control mb-2"
             name="userEmail"
@@ -35,6 +38,9 @@
             pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
             title="Introduce un email válido"
           />
+          <span class="error col-1" aria-live="polite"></span>
+        </label>
+        <label for="userJob" class="row">
           <input
             class="form-control mb-2"
             name="userJob"
@@ -45,9 +51,10 @@
             required
             title="No puede ser vacío"
           />
-          <button class="btn btn-primary" type="submit">Enviar</button>
-        </form>
-      </div>
+        </label>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
