@@ -2,6 +2,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import { obtenerUsuarios } from "./src/js/http-provider";
+import { init } from "./src/js/usuarios-page";
 
-console.log(await obtenerUsuarios());
+init();
