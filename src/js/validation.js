@@ -10,7 +10,7 @@ const validation = () => {
     email.addEventListener('input', (event) => {
         if(email.validity.valid) {
             emailError.innerHTML=''; //Restablece el contenido del mensaje
-            emailError.className='error'; //Restablece el estado visual el mensaje
+            //emailError.className='error'; //Restablece el estado visual el mensaje
         } else { //Si todavía hay error, muestra el error
             showError();
         }

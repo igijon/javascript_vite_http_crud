@@ -1,5 +1,6 @@
 import { obtenerChiste } from "./http-provider";
 
+console.log("Hola mundo desde chistes-page.js");
 const body = document.body;
 let btnOtro, olList;  //Estos elementos aún no están creados en el HTML 
 
@@ -14,6 +15,7 @@ const crearChistesHtml = () => {
     const divChistes = document.createElement('div');
     divChistes.innerHTML = html;
     body.append(divChistes);
+    console.log("HTML creado");
 }
 
 
@@ -22,6 +24,7 @@ const eventos =  () => {
     btnOtro = document.querySelector('button');
     btnOtro.addEventListener('click', async () => {
         btnOtro.disable = true;
+        console.log("Obteniendo chiste...");
         dibujarChiste( await obtenerChiste() );
         btnOtro.disable = false;
     })
